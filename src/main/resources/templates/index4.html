@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>第四个Thymeleaf页面</title>
+    <link href="../static/pages-cart.css" th:href="@{/pages-cart.css}">
+</head>
+<body>
+<!--if-->
+<h1 th:if="${flag == 'yes'}">中公教育</h1>
+<!--else-->
+<h1 th:unless="${flag == 'yes'}">英雄，去超越</h1>
+<br>
+
+<div th:switch="${menu}">
+    <p th:case="admin">user is admin</p>
+    <p th:case="${manager}">user is manager</p>
+</div>
+
+<!--引入字段-->
+    <!--insert-->
+    <div th:insert="~{footer :: copy}"></div>
+    <!--include-->
+    <div th:include="~{footer :: copy}"></div>
+    <!--replace-->
+    <div th:replace="~{footer :: copy}"></div>
+</body>
+</html>

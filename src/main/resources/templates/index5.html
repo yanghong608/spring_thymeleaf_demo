@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>第五个Thymeleaf页面</title>
+</head>
+<body>
+
+<!--日期格式化-->
+<span th:text="${#dates.format(date,'yyyy-MM-dd hh:mm:ss')}"></span><br>
+<!--数字格式化   参数2：表示整数保留几位   参数3：表示小数保留几位-->
+<span th:text="${#numbers.formatDecimal(num,1,2)}"></span><br>
+<!--字符串格式化-->
+<!--该方法表示长度超过60，后面显示省略号-->
+<span th:text="${#strings.abbreviate(str,60)}"></span><br>
+<!--截取字符串-->
+<span th:text="${#strings.substring(str,1,20)}"></span><br>
+<!--判断字符串是否为空-->
+<span th:if="${#strings.isEmpty(str)}"></span>
+</body>
+</html>
