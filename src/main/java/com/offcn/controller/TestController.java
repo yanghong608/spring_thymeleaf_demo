@@ -8,6 +8,7 @@ package com.offcn.controller;
 public class TestController {
 
     public String test(){
-        return null;
+        //update by yh
+        System.out.print("hello GitHub");
     }
 }
